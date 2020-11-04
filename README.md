@@ -1,4 +1,4 @@
-# Estudos dos principios do SOLID #
+# Estudos dos princípios do SOLID #
 
 Principio do SOLID: 
 
