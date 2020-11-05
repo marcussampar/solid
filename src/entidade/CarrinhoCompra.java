@@ -5,59 +5,27 @@ import java.util.List;
 
 public class CarrinhoCompra {
 	
-	private List<Integer> idProdutos;	
-	private double valorTotal;
-	private int statusPedido; 
+	private List<Item> itens;	
+	private double valorTotal;	 
 	
 	public CarrinhoCompra() {		
-		this.idProdutos = new ArrayList<Integer>();		
-		this.valorTotal = 0;
-		this.statusPedido = 0;
+		this.itens = new ArrayList<Item>();		
+		this.valorTotal = 0;		
 	}
 		
-	public void addItem(Integer i, double valor) {
-		this.idProdutos.add(i);
+	public void addItem(Item item, double valor) {
+		this.itens.add(item);
 		this.valorTotal += valor;		
 	}
 	
-	public void confirmarPedido() {
-		if(validarCarrinho()) {
-			this.statusPedido = 1;
-		}
+	public boolean validarCarrinho() {
+		return itens.size()>0;
 	}
 	
-	public void faturarPedido() {
-		if(validarCarrinho()) {
-			this.statusPedido = 2;
-			enviarEmail();
-		}
-	}
-	
-	private void enviarEmail() {
-		System.out.println("Pedido faturado com sucesso - email enviado");
-	}
-	
-	private boolean validarCarrinho() {
-		if(idProdutos.size()==0) {
-			System.out.println("Carrinho vazio");
-			return false;
-		}else {
-			return true;
-		}
-	}
-	
-	public void exibirItem() {
-		for(Integer i: idProdutos) {
-			System.out.println(i);
+	public void exibirCarrinho() {
+		for(Item item: itens) {
+			System.out.println(item.getDescricao());
 		}		
-	}
-	
-	public void exibirValor() {		
-		System.out.println(this.valorTotal);		
-	}
-	
-	public void exibirStatusPedido() {
-		System.out.println(this.statusPedido);
 	}
 	
 }

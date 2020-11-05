@@ -5,7 +5,7 @@ public class mainClass {
 	
 	public static void main (String args[]) {
 		
-		CarrinhoCompra c1 = new CarrinhoCompra();
+		/*CarrinhoCompra c1 = new CarrinhoCompra();
 		c1.exibirItem();	
 		
 		c1.addItem(1, 750);
@@ -20,6 +20,6 @@ public class mainClass {
 		c1.exibirStatusPedido();
 		
 		c1.faturarPedido();
-		c1.exibirStatusPedido();
+		c1.exibirStatusPedido();*/
 	}
 }
