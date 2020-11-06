@@ -7,6 +7,9 @@ public class mainClass {
 		Pedido p1 = new Pedido();
 		p1.exibirStatusPedido();
 		p1.exibirValorPedido();
+		
+		System.out.println("--Validando carrinho: "+p1.getCarrinhoCompra().validarCarrinho());
+		
 		p1.faturarPedido();
 		
 		Item i1 = new Item(1, "Celular", 750);

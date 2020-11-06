@@ -13,10 +13,12 @@ public class CarrinhoCompra {
 		this.valorTotal = 0;		
 	}
 		
-	public void addItem(Item item) {
-		System.out.println(item.getDescricao()+ " adicionado");
-		this.itens.add(item);
-		this.setValorTotal(this.getValorTotal() + item.getValor());		
+	public void addItem(Item item) {	
+		if(item.isItemValido()) {
+			System.out.println(item.getDescricao()+ " adicionado");
+			this.itens.add(item);
+			this.setValorTotal(this.getValorTotal() + item.getValor());
+		}
 	}
 	
 	public boolean validarCarrinho() {

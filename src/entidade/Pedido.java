@@ -28,11 +28,11 @@ public class Pedido {
 	}
 	
 	public void exibirValorPedido() {		
-		System.out.println(this.carrinho.getValorTotal());		
+		System.out.println("--Exibindo valor do pedido: "+this.carrinho.getValorTotal());		
 	}
 	
 	public void exibirStatusPedido() {
-		System.out.println(this.getStatusPedido());
+		System.out.println("--Exibindo status do pedido: "+this.getStatusPedido());
 	}
 	
 	public CarrinhoCompra getCarrinhoCompra() {

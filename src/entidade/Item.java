@@ -18,6 +18,14 @@ public class Item {
 		this.valor = valor;
 	}
 	
+	public boolean isItemValido() {
+		if(this.getDescricao().isEmpty() && this.getIdProduto() > 0 && this.getValor() > 0) {
+			return true;
+		}else {
+			return false;
+		}
+		
+	}
 
 	public int getIdProduto() {
 		return idProduto;
