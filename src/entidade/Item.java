@@ -11,6 +11,13 @@ public class Item {
 		this.descricao = "";
 		this.valor = 0;
 	}
+	
+	public Item(int idProduto, String descricao, double valor) {
+		this.idProduto = idProduto;
+		this.descricao = descricao;
+		this.valor = valor;
+	}
+	
 
 	public int getIdProduto() {
 		return idProduto;

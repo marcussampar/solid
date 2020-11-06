@@ -13,12 +13,14 @@ public class CarrinhoCompra {
 		this.valorTotal = 0;		
 	}
 		
-	public void addItem(Item item, double valor) {
+	public void addItem(Item item) {
+		System.out.println(item.getDescricao()+ " adicionado");
 		this.itens.add(item);
-		this.valorTotal += valor;		
+		this.setValorTotal(this.getValorTotal() + item.getValor());		
 	}
 	
 	public boolean validarCarrinho() {
+		System.out.println(itens.size());
 		return itens.size()>0;
 	}
 	
@@ -27,5 +29,15 @@ public class CarrinhoCompra {
 			System.out.println(item.getDescricao());
 		}		
 	}
+
+	public double getValorTotal() {
+		return valorTotal;
+	}
+
+	public void setValorTotal(double valorTotal) {
+		this.valorTotal = valorTotal;
+	}
+	
+	
 	
 }

@@ -3,13 +3,11 @@ package entidade;
 public class Pedido {
 	
 	private int statusPedido;
-	private CarrinhoCompra carrinho;	
-	private double valorTotalPedido;
+	private CarrinhoCompra carrinho;	 
 	
 	public Pedido() {
 		this.statusPedido = 0;
-		this.carrinho = new CarrinhoCompra();
-		this.valorTotalPedido = 0;
+		this.carrinho = new CarrinhoCompra(); 
 	}
 	
 	public boolean confirmarPedido() {
@@ -30,7 +28,7 @@ public class Pedido {
 	}
 	
 	public void exibirValorPedido() {		
-		System.out.println(this.getValorTotalPedido());		
+		System.out.println(this.carrinho.getValorTotal());		
 	}
 	
 	public void exibirStatusPedido() {
@@ -48,12 +46,5 @@ public class Pedido {
 	public void setStatusPedido(int statusPedido) {
 		this.statusPedido = statusPedido;
 	}
-
-	public double getValorTotalPedido() {
-		return valorTotalPedido;
-	}
-
-	public void setValorTotalPedido(double valorTotalPedido) {
-		this.valorTotalPedido = valorTotalPedido;
-	}
+ 
 }
